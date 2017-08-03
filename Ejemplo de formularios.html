@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de formularios</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="validadores.js"></script>
+</head>
+<body>
+	<h1>Texto en h1</h1>
+	<h2>Este es otro texto en h2 ¿Se nota la diferencia?</h2>
+	<label>Este es el título del formulario</label>
+	<form method="get" action="www.google.cl" onsubmit="return validaCampos()">
+		<label class="formulario">Rut *</label> <input type="text" id="txtRut" oninput="checkRut(this)" onchange="trimInput.call(this)" required><label id="txtRutError" class="error"></label>
+		 <br/>
+		<label class="formulario">Nombre *</label> <input type="text" id="txtNombre" oninput="validaTexto('txtNombre')" required> <label id="txtNombreError" class="error"></label>
+		<br/>
+		<label class="formulario">Apellidos *</label> <input type="text" id="txtApellidos" oninput="validaTexto('txtApellidos')" required> <label id="txtApellidosError" class="error"></label>
+		<br/>
+		<label class="formulario">Correo electónico *</label> <input type="text" id="txtCorreo" oninput="validaMail()" required> <label id="txtCorreoError" class="error"></label>
+		<br/>
+		<input type="submit" value="Enviar" />
+		<button id="btnCancelar" >Cancelar</button> 
+		
+	</form>
+</body>
+</html>

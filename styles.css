@@ -1,0 +1,13 @@
+body {
+    background-color: yellow;
+}
+
+label.formulario{
+	color:Red;
+	text-align:left;
+}
+
+label.error{
+	color:Red;
+}
+
